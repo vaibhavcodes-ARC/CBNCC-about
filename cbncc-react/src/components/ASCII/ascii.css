@@ -1,0 +1,36 @@
+.ascii-art {
+  font-family: "JetBrains Mono", monospace;
+  line-height: 1.1;
+  white-space: pre;
+  opacity: 0.7;
+  user-select: none;
+  display: inline-block;
+  transition: opacity 0.3s ease;
+}
+
+.ascii-row {
+  display: block;
+}
+
+.ascii-char {
+  display: inline-block;
+  transition: transform 0.2s cubic-bezier(0.17, 0.67, 0.83, 0.67),
+    color 0.2s ease;
+  will-change: transform;
+}
+
+.ascii-char.glitch {
+  color: #ffffff;
+  text-shadow: 0 0 8px rgba(255, 255, 255, 0.8);
+  transform: scale(1.2) rotate(5deg);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ascii-art,
+  .ascii-char {
+    animation: none !important;
+    transition: none !important;
+    transform: none !important;
+    opacity: 1 !important;
+  }
+}
