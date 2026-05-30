@@ -14,7 +14,7 @@ export const Home = () => {
   useGlowCursor();
 
   return (
-    <div className="dark min-h-screen bg-background text-on-surface overflow-x-hidden selection:bg-primary selection:text-surface">
+    <div className="min-h-screen bg-background text-on-surface overflow-x-hidden selection:bg-primary selection:text-surface">
       {/* Glow cursor */}
       <div
         id="glow-cursor"
@@ -23,7 +23,7 @@ export const Home = () => {
 
       <Header />
 
-      <main className="relative hairline-grid pt-[80px] md:pt-[120px]">
+      <main className="relative pt-[80px] md:pt-[120px]">
         <NoiseOverlay />
         <AboutSection data={aboutData} />
         <ASCIISection />

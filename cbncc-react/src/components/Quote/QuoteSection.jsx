@@ -17,7 +17,7 @@ export const QuoteSection = ({ quotes, interval = 6000 }) => {
 
   return (
     <motion.section
-      className="py-20 md:py-section-gap px-4 md:px-grid-margin relative overflow-hidden bg-charcoal-surface/30"
+      className="py-20 md:py-section-gap px-4 md:px-grid-margin relative overflow-hidden"
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true, amount: 0.2 }}
