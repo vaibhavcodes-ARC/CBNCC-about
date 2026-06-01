@@ -17,14 +17,14 @@ export const QuoteSection = ({ quotes, interval = 6000 }) => {
 
   return (
     <motion.section
-      className="py-20 md:py-section-gap px-4 md:px-grid-margin relative overflow-hidden"
+      className="py-24 md:py-[180px] px-4 md:px-grid-margin relative overflow-hidden bg-background"
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true, amount: 0.2 }}
       variants={staggerContainer}
     >
-      <div className="max-w-5xl mx-auto text-center relative">
-        <span className="font-display-xl text-primary/10 text-[100px] md:text-[180px] absolute -top-12 md:-top-24 left-0 md:left-0 select-none pointer-events-none">
+      <div className="max-w-[1200px] mx-auto text-center relative">
+        <span className="font-display-xl text-primary/5 text-[150px] md:text-[300px] absolute -top-20 md:-top-32 left-0 select-none pointer-events-none leading-none">
           "
         </span>
 
@@ -35,13 +35,13 @@ export const QuoteSection = ({ quotes, interval = 6000 }) => {
             animate="visible"
             exit="hidden"
             variants={scaleIn}
-            className="font-display-lg text-[32px] md:text-[72px] text-primary tracking-tight leading-tight relative z-10 px-4"
+            className="font-display-xl text-[48px] md:text-[110px] lg:text-[130px] text-primary tracking-tight leading-[1.1] relative z-10 px-4 py-12"
           >
             {currentQuote.quote.split("\n").map((line, i) => (
-              <div key={i}>
+              <div key={i} className="my-2 md:my-4">
                 {i === currentQuote.quote.split("\n").length - 1 ? (
                   <>
-                    <span className="text-on-surface-variant font-display-xl italic inline-block transition-transform duration-500 hover:scale-105">
+                    <span className="text-on-surface-variant font-display-xl italic inline-block transition-transform duration-700 hover:scale-[1.02]">
                       {line}
                     </span>
                   </>
@@ -53,27 +53,27 @@ export const QuoteSection = ({ quotes, interval = 6000 }) => {
           </motion.blockquote>
         </AnimatePresence>
 
-        <span className="font-display-xl text-primary/10 text-[100px] md:text-[180px] absolute -bottom-24 md:-bottom-48 right-0 md:right-0 select-none pointer-events-none rotate-180">
+        <span className="font-display-xl text-primary/5 text-[150px] md:text-[300px] absolute -bottom-24 md:-bottom-40 right-0 select-none pointer-events-none rotate-180 leading-none">
           "
         </span>
 
         <motion.div
           variants={staggerContainer}
-          className="mt-12 md:mt-16 flex justify-center items-center gap-4"
+          className="mt-20 md:mt-32 flex justify-center items-center gap-6"
         >
           <motion.div
             variants={staggerItem}
-            className="w-8 md:w-12 h-[1px] bg-border-subtle"
+            className="w-12 md:w-24 h-[1px] bg-primary/20"
           />
           <motion.p
             variants={staggerItem}
-            className="font-label-mono text-[10px] md:text-label-mono uppercase tracking-[0.15em] md:tracking-[0.2em] text-on-surface-variant"
+            className="font-label-mono text-[11px] md:text-[13px] uppercase tracking-[0.3em] text-on-surface-variant font-medium"
           >
             {currentQuote.meta}
           </motion.p>
           <motion.div
             variants={staggerItem}
-            className="w-8 md:w-12 h-[1px] bg-border-subtle"
+            className="w-12 md:w-24 h-[1px] bg-primary/20"
           />
         </motion.div>
       </div>

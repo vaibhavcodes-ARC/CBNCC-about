@@ -68,7 +68,7 @@ export default {
       },
       spacing: {
         "element-gap": "32px",
-        "section-gap": "160px",
+        "section-gap": "120px",
         gutter: "24px",
         "grid-margin": "64px",
         unit: "8px",

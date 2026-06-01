@@ -1,13 +1,10 @@
-import { Header } from "../components/UI/Header";
 import { Footer } from "../components/UI/Footer";
 import { NoiseOverlay } from "../components/UI";
 import { AboutSection } from "../components/About/AboutSection";
 import { ASCIISection } from "../components/ASCII/ASCIISection";
-import { VisionSection } from "../components/Vision/VisionSection";
 import { QuoteSection } from "../components/Quote/QuoteSection";
 import { useGlowCursor } from "../hooks/useParallax";
 import { aboutData } from "../data/aboutData";
-import { visionData } from "../data/visionData";
 import { quotesData } from "../data/quotesData";
 
 export const Home = () => {
@@ -21,13 +18,10 @@ export const Home = () => {
         className="glow-cursor"
       />
 
-      <Header />
-
-      <main className="relative pt-[80px] md:pt-[120px]">
+      <main className="relative pt-0 md:pt-0">
         <NoiseOverlay />
         <AboutSection data={aboutData} />
         <ASCIISection />
-        <VisionSection data={visionData} />
         <QuoteSection quotes={quotesData} />
       </main>
 
