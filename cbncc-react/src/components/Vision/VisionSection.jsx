@@ -23,14 +23,14 @@ export const VisionSection = ({ data }) => {
           <div className="flex flex-col items-center max-w-4xl mx-auto text-center">
               <motion.h2
                 variants={staggerItem}
-                className="font-display-lg text-[40px] md:text-[72px] text-primary leading-tight mb-8"
+                className="font-display-lg text-[40px] md:text-[72px] text-primary leading-tight mb-4"
               >
                 Code. Create. <br /> Collaborate.
               </motion.h2>
               
               <motion.p
                 variants={staggerItem}
-                className="font-body-lg text-[18px] md:text-[24px] text-on-surface-variant leading-relaxed font-light italic border-l border-primary pl-6 py-2"
+                className="font-body-lg text-[18px] md:text-[24px] text-on-surface-variant leading-relaxed font-light italic border-l border-primary pl-6 py-0"
               >
                 "{data.quote}"
               </motion.p>
