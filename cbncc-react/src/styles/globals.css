@@ -84,3 +84,25 @@ body {
     scroll-behavior: auto !important;
   }
 }
+
+/* Inverted theme (applies site-wide when `inverted` is added to <html> or <body>) */
+html.inverted,
+body.inverted {
+  filter: invert(1) hue-rotate(180deg) !important;
+  background-color: #000000 !important;
+  color: #ffffff !important;
+}
+
+/* Keep images, videos and SVGs visually correct by re-inverting them */
+html.inverted img,
+html.inverted picture,
+html.inverted video,
+html.inverted svg,
+html.inverted .no-invert {
+  filter: invert(1) hue-rotate(180deg) !important;
+}
+
+/* Small helpers to opt-out of inversion on specific components */
+.no-invert * {
+  filter: none !important;
+}
